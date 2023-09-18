@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <title>Dojo Survey Index</title>
+</head>
+<body>
+    <div class="container p-3 mb-2 bg-dark text-white">
+        <h4 class="mb-3">submitted info</h4>
+        {% for item in value_list %}
+        <div class="row">
+            <div class="col-md-6 mb-3">Name: {{item['name']}}</div>
+            <div class="col-md-6 mb-3">Dojo location : {{item['location']}}</div>
+            <div class="col-md-6 mb-3">Favorite language : {{item['Language']}} </div>
+            <div class="col-md-6 mb-3">Comment : {{item['Comments']}}</div>
+        </div>
+        {% endfor %}
+        <a class="btn btn-primary btn-lg btn-block" href="/">Go Back</a>
+    </div>
+</body>
+</html>

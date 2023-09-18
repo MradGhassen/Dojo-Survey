@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <title>Dojo Survey Index</title>
+</head>
+<body>
+    <div class="container p-3 mb-2 bg-secondary text-white ">
+    <h3>Dojo Survey</h3>
+    <form action='/process' method='post'>
+    <div class="mb-3">    
+    <label for='name' class="form-label">Your Name:</label>
+    <input type='text' class="form-control" name='name'>
+    </div>    
+    <div class="mb-3">    
+    <label for="name" class="form-label">Dojo Locations:</label>
+    </div>    
+    <div class="mb-3">   
+    <select name="location" class="form-control" id="inlineFormSelectPref">
+        <option value="Tunis">Tunis</option>
+        <option value="Soussa">Soussa</option>
+        <option value="Sfax">Sfax</option>
+    </select>
+    </div>
+    <div class="mb-3">    
+    <label for="name" class="form-label">Favorite Languages:</label>
+    </div>    
+    <div class="mb-3">
+    <select name="Language" class="form-control" id="inlineFormSelectPref">
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="HTML">HTML</option>
+    </select>
+    </div>
+    <div class="form-floating">    
+    <label for="name" class="form-label">Comment ( Optional ):</label>
+    <textarea name="Comments" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+    </div>
+    <div>
+    <input type='submit' class="btn btn-primary" value='create user'></div>
+    </form>
+    </div>
+    <a href="/clear" class="btn btn-primary">Clear Cookies</a>
+</body>
+</html>
